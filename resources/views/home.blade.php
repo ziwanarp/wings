@@ -4,43 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <link href="{{asset('assets/stepper/stepper.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" >
+    <title>Home Page</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/icon.png') }}">
+    <link href="{{asset('assets/form/form.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
 <body>
-
-    <div class="container">
-        <div class="progress-container">
-          <div class="progress" id="progress"></div>
-          <div class="circle active">1</div>
-          <div class="circle">2</div>
-          <div class="circle">3</div>
-          <div class="circle">4</div>
+    
+    <!-- MultiStep Form -->
+<div class="container-fluid" id="grad1">
+    <div class="row justify-content-center mt-0">
+        <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2><strong>Sign Up Your User Account</strong></h2>
+                <p>Fill all form field to go to next step</p>
+                <div class="row">
+                    <div class="col-md-12 mx-0">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="product"><strong>Product</strong></li>
+                                <li id="personal"><strong>Personal</strong></li>
+                                <li id="payment"><strong>Payment</strong></li>
+                                <li id="confirm"><strong>Finish</strong></li>
+                            </ul>
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Account Information</h2>
+                                    <input type="email" name="email" placeholder="Email Id"/>
+                                    <input type="text" name="uname" placeholder="UserName"/>
+                                    <input type="password" name="pwd" placeholder="Password"/>
+                                    <input type="password" name="cpwd" placeholder="Confirm Password"/>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="Next Step"/>
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Personal Information</h2>
+                                    <input type="text" name="fname" placeholder="First Name"/>
+                                    <input type="text" name="lname" placeholder="Last Name"/>
+                                    <input type="text" name="phno" placeholder="Contact No."/>
+                                    <input type="text" name="phno_2" placeholder="Alternate Contact No."/>
+                                </div>
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <input type="button" name="next" class="next action-button" value="Next Step"/>
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Payment Information</h2>
+                                    <div class="radio-group">
+                                        <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
+                                        <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div>
+                                        <br>
+                                    </div>
+                                    <label class="pay">Card Holder Name*</label>
+                                    <input type="text" name="holdername" placeholder=""/>
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <label class="pay">Card Number*</label>
+                                            <input type="text" name="cardno" placeholder=""/>
+                                        </div>
+                                        <div class="col-3">
+                                            <label class="pay">CVC*</label>
+                                            <input type="password" name="cvcpwd" placeholder="***"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <label class="pay">Expiry Date*</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <select class="list-dt" id="month" name="expmonth">
+                                                <option selected>Month</option>
+                                                <option>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                                <option>April</option>
+                                                <option>May</option>
+                                                <option>June</option>
+                                                <option>July</option>
+                                                <option>August</option>
+                                                <option>September</option>
+                                                <option>October</option>
+                                                <option>November</option>
+                                                <option>December</option>
+                                            </select>
+                                            <select class="list-dt" id="year" name="expyear">
+                                                <option selected>Year</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <input type="button" name="make_payment" class="next action-button" value="Confirm"/>
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title text-center">Success !</h2>
+                                    <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-3">
+                                            <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5>You Have Successfully Signed Up</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <form id="form-step-1">
-            <input type="text" placeholder="Step 1 Input">
-          </form>
-        
-          <form id="form-step-2" style="display: none;">
-            <input type="text" placeholder="Step 2 Input">
-          </form>
-        
-          <form id="form-step-3" style="display: none;">
-            <input type="text" placeholder="Step 3 Input">
-          </form>
-        
-          <form id="form-step-4" style="display: none;">
-            <input type="text" placeholder="Step 4 Input">
-          </form>
-        <button class="btn" id="prev" style="display: none;">Prev</button>
-        <button class="btn" id="next" style="display: none;">Next</button>
-        <button class="btn" id="submit" style="display: none;">Submit</button>
     </div>
-    
-    
- <script src="{{asset('assets/stepper/stepper.js')}}"></script>
+</div>
+<script src="{{asset('assets/form/form.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
