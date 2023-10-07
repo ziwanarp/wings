@@ -26,5 +26,36 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'password' => bcrypt('admin'),
         ]);
+
+        \App\Models\Product::create([
+            'product_code' => 'SKUSKILNP',
+            'product_name' => 'SO klin Pewangi',
+            'price' => 15000,
+            'currency' => 'IDR',
+            'discount' => 10,
+            'dimension' => '13 cm x 10 cm',
+            'unit' => 'PCS',
+
+        ]);
+        \App\Models\Product::create([
+            'product_code' => 'SKUGIVBR',
+            'product_name' => 'Giv Biru',
+            'price' => 11000,
+            'currency' => 'IDR',
+            'discount' => 0,
+            'dimension' => '5 cm x 8 cm',
+            'unit' => 'PCS',
+
+        ]);
+        \App\Models\Product::create([
+            'product_code' => 'SKUSKILNL',
+            'product_name' => 'SO Klin Liquid',
+            'price' => 18000,
+            'currency' => 'IDR',
+            'discount' => 0,
+            'dimension' => '10 cm x 10 cm',
+            'unit' => 'PCS',
+
+        ]);
     }
 }
