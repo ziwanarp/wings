@@ -153,7 +153,9 @@ class HomeController extends Controller
 
     public function report(){
         $data = TransactionDetail::all();
-
+        if(count($data) == 0){
+            return redirect('/');
+        }
         foreach($data as $item){
             $data = Product::where('id', $item->product_code)->get();
             $result[] = [
