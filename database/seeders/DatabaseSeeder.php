@@ -60,5 +60,20 @@ class DatabaseSeeder extends Seeder
             'images' => 'https://mysoklin-dashboard.efectifity.com/api/files/pzkj3c27zthykgj/qdg70vly3rxbc36/sk_liquid_red_16_AwtbGsVbM1.png'
 
         ]);
+
+        \App\Models\TransactionHeader::create([
+            'document_code' => 'TRX',
+            'document_number' => 001,
+            'user_id' => 1,
+            'total' => 0,
+            'date' => '2000-05-20'
+        ]);
+        \App\Models\TransactionHeader::create([
+            'document_code' => 'TRX',
+            'document_number' => 001,
+            'user_id' => 2,
+            'total' => 0,
+            'date' => '2000-05-20'
+        ]);
     }
 }

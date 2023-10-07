@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('dimension',50);
             $table->string('unit',5);
             $table->string('images');
+            $table->integer('quantity')->nullable();
 
             $table->timestamps();
         });

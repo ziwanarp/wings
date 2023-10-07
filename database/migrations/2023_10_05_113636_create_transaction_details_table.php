@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('document_code',3);
             $table->string('document_number',10);
-            $table->string('product_code',18);
-            $table->decimal('price',6,2);
+            $table->foreignId('product_code');
+            $table->decimal('price',10,2);
             $table->integer('quantity');
             $table->string('unit',5);
             $table->decimal('sub_total',10,2);
             $table->string('currency',5);
+            $table->string('user',128);
             $table->timestamps();
         });
     }

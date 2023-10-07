@@ -159,7 +159,7 @@ select.list-dt:focus {
 #progressbar li {
     list-style-type: none;
     font-size: 12px;
-    width: 50%;
+    width: 100%;
     float: left;
     position: relative;
 }
@@ -170,11 +170,6 @@ select.list-dt:focus {
     content: "\f023";
 }
 
-
-#progressbar #confirm:before {
-    font-family: FontAwesome;
-    content: "\f00c";
-}
 
 /*ProgressBar before any progress*/
 #progressbar li:before {
