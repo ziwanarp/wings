@@ -22,6 +22,7 @@ return new class extends Migration
             $table->decimal('discount',6,2);
             $table->string('dimension',50);
             $table->string('unit',5);
+            $table->string('images');
 
             $table->timestamps();
         });

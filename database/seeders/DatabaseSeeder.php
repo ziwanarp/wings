@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             'discount' => 10,
             'dimension' => '13 cm x 10 cm',
             'unit' => 'PCS',
+            'images' => 'https://images.tokopedia.net/img/cache/700/VqbcmM/2022/1/29/ac6b9868-bd65-4c33-a90c-1b7c95682403.jpg'
 
         ]);
         \App\Models\Product::create([
@@ -45,6 +46,7 @@ class DatabaseSeeder extends Seeder
             'discount' => 0,
             'dimension' => '5 cm x 8 cm',
             'unit' => 'PCS',
+            'images' => 'https://www.mirotakampus.com/resources/assets/images/product_images/1643005574.giv_giv-biru-kotak-bar-soap--76-gr-_full02.jpg'
 
         ]);
         \App\Models\Product::create([
@@ -55,6 +57,7 @@ class DatabaseSeeder extends Seeder
             'discount' => 0,
             'dimension' => '10 cm x 10 cm',
             'unit' => 'PCS',
+            'images' => 'https://mysoklin-dashboard.efectifity.com/api/files/pzkj3c27zthykgj/qdg70vly3rxbc36/sk_liquid_red_16_AwtbGsVbM1.png'
 
         ]);
     }

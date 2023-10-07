@@ -22,5 +22,6 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'home']);
+    Route::get('/allProducts/{id}', [HomeController::class, 'allProducts']);
     Route::get('/logout', [LoginController::class, 'logout']);
 });
