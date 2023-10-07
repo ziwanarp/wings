@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('product_code',18)->unique();
             $table->string('product_name',30);
-            $table->decimal('price',6,2);
+            $table->decimal('price',10,2);
             $table->string('currency',5);
             $table->decimal('discount',6,2);
             $table->string('dimension',50);
